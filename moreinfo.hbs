@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>wetherapp</title>
+    {{!-- <script>
+       const submitBtn=document.getElementById('submitBtn');
+       const lavda=document.getElementById('prince');
+       
+
+       const getInfo = (event)=>{
+       event.preventDefault();
+       alert('hii');
+       
+               }
+         submitBtn.addEventListener('click' , getInfo );
+      </script> --}}
+</head>
+<body>
+   {{>navbar}}
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+               
+               <div class="tempinformation">
+                   <div class="top_layer">
+                       <p id="day">thursday</p>
+                       {{!-- <p id="today_data">9 sept</p> --}}
+
+                   </div>
+                   <div class="main_layer">
+                       <p id="city_name">get your output here</p>
+                        <p id="humidity">Humidity : <span id="humidity_real_val">0</span><span id="humidity_val">%</span></p>
+                       <div class="middle_layer">
+                           <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
+                           <p id="temp_status"> <i class="fa fa-cloud" aria-hidden="true"></i> </p>
+
+                       </div>
+                   </div>
+               </div>
+               <button type="button" class="btn btn-secondary">Secondary</button>
+            </div>
+         </div>
+     </div>
+     
+     {{>footer}}
+     <script src="js/main.js"></script>
+     <script>
+         const day=document.getElementById("day");
+         const getCurrentday=()=>
+         {
+             let weekday=new Array(7);
+             weekday[0]="Sunday";
+             weekday[1]="Monday";
+             weekday[2]="Tuesday";
+             weekday[3]="Wednesday";
+             weekday[4]="Thursday";
+             weekday[5]="Friday";
+             weekday[6]="Saturday";
+
+             let currentTime=new Date();
+             let days=weekday[currentTime.getDay()];
+            const day=document.getElementById("day");
+            day.innerText=days;
+
+         };
+         getCurrentday();
+     </script>
+     
+</body>
+</html>
